@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'angular-compilers',
+  name: 'enghong:angular-compilers',
   version: '0.4.0',
   summary: 'Rollup, AOT, SCSS, HTML and TypeScript compilers for Angular Meteor',
-  git: 'https://github.com/Urigo/angular-meteor/tree/master/atmosphere-packages/angular-compilers',
+  git: 'https://github.com/enghong/angular-meteor/tree/master/atmosphere-packages/angular-compilers',
   documentation: 'README.md'
 });
 
@@ -14,9 +14,9 @@ Package.registerBuildPlugin({
   use: [
     // Uses an external packages to get the actual compilers
     'ecmascript@0.10.5',
-    'angular-typescript-compiler@0.4.0',
-    'angular-html-compiler@0.4.0',
-    'angular-scss-compiler@0.4.0'
+    'enghong:angular-typescript-compiler@0.5.0',
+    'enghong:angular-html-compiler@0.4.0',
+    'enghong:angular-scss-compiler@0.4.0'
   ]
 });
 

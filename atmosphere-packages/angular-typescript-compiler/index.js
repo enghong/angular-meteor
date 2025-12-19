@@ -5,11 +5,11 @@ import ts from 'typescript';
 
 import {
   AngularHtmlCompiler
-} from 'meteor/angular-html-compiler';
+} from 'meteor/enghong:angular-html-compiler';
 
 import {
   AngularScssCompiler
-} from 'meteor/angular-scss-compiler';
+} from 'meteor/enghong:angular-scss-compiler';
 
 import {
   TSBuild

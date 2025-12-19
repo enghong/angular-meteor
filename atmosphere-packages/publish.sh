@@ -1,10 +1,10 @@
 #!/bin/sh
 
 cd angular-html-compiler
-meteor publish
+meteor --release 2.8.0 publish
 cd ../angular-scss-compiler
-meteor publish
+meteor --release 2.8.0 publish
 cd ../angular-typescript-compiler
-meteor publish
+meteor --release 2.8.0 publish
 cd ../angular-compilers
-meteor publish
+meteor --release 2.8.0 publish
