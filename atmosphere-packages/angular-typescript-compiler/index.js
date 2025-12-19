@@ -93,7 +93,7 @@ export class AngularTsCompiler {
             .split('#')[0]) +
           (this.isAot ? '.ngfactory' : '') +
           replaced[0];
-        fakeLoaderCode += ` if(!Meteor){module.dynamicImport(${fixedUrl})} `;
+        fakeLoaderCode += ` if(!Meteor){Promise.resolve().then(() => require(${fixedUrl}))} `;
         return `loadChildren: ${replaced}`;
       })
 
@@ -118,7 +118,7 @@ export class AngularTsCompiler {
           modulePath += '.ngfactory';
           moduleName += 'NgFactory';
         }
-        return `loadChildren: () => module.dynamicImport('${modulePath}').then(allModule => allModule['${moduleName}'])`;
+        return `loadChildren: () => Promise.resolve().then(() => require("${modulePath}")).then(m => m.${moduleName})`;
       });
 
   }
