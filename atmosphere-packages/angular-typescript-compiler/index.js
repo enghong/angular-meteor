@@ -31,7 +31,7 @@ import {
 
 const TEMPLATE_URL_REGEX = /templateUrl\s*:(\s*['"`](.*?)['"`]\s*([,}]))/gm;
 const STYLES_URLS_REGEX = /styleUrls *:(\s*\[[^\]]*?\])/g;
-const LOAD_CHILDREN_REGEX = /loadChildren[\s]*:[\s]*['|"].*#{1}.*['|"]/;
+const LOAD_CHILDREN_REGEX = /loadChildren[\s]*:[\s]*(['|"].*#{1}.*['|"])/gm;
 const STRING_REGEX = /(['`"])((?:[^\\]\\\1|.)*?)\1/g;
 
 const JS_REGEX = /\.html$/;
@@ -262,6 +262,7 @@ export class AngularTsCompiler {
 
         } catch (e) {
           console.log(`${filePath} ignored due to some errors!`);
+          console.log(e);
         }
       }
     }
