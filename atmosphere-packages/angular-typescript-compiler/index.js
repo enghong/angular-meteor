@@ -201,7 +201,8 @@ export class AngularTsCompiler {
     }
     const buildOptions = {
       arch,
-      compilerOptions: tsConfig.compilerOptions
+      compilerOptions: tsConfig.compilerOptions,
+      useCache: true,
     };
     const tsBuild = new TSBuild(allPaths, getContent, buildOptions);
     let mainCodePath;
