@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Npm.depends({
-  "meteor-typescript": "0.9.0",
+  "meteor-typescript": "git+https://github.com/enghong/meteor-typescript#9e4cbc44c9b408b73e989330585b43acf0c94789",
   rollup: "2.26.11",
   "rollup-plugin-node-resolve": "5.2.0",
   "rollup-plugin-hypothetical": "2.1.0",
